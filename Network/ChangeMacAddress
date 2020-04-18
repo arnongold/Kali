@@ -1,0 +1,5 @@
+ifconfig
+ifconfig wlan0 down
+ifconfig wlan0 hw ether fe:45:8f:fd:7b:12
+ifconfig wlan0 up
+
