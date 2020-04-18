@@ -1,0 +1,3 @@
+#!/bin/bash
+# Testing script
+echo "This worked !"
