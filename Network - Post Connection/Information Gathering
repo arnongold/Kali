@@ -1,0 +1,23 @@
+netdiscover -r 192.168.1.1/24
+
+# =============   Install ZenMap   =========================
+
+# First download zenmap -> "Optional Zenmap GUI (all platforms): zenmap-7.80-1.noarch.rpm" from https://nmap.org/download.html
+# https://nmap.org/dist/zenmap-7.80-1.noarch.rpm
+# Should be in your downloads folder.
+
+# Then run these commands:
+
+apt-get update
+apt-get install alien
+
+# Go to your downloads folder cd Downloads
+
+sudo alien "name of downloaded package.rpm"
+
+sudo dpkg -i "name of converted package.deb"
+
+zenmap
+
+# ======  Inside zenmap   ======
+# Do a ping scan on a subnet ie. 192.168.1.1/24
