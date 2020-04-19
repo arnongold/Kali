@@ -1,0 +1,4 @@
+airodump-ng --bssid 90:8D:78:55:7A:A4 --channel 10 --write basic_wep wlan0
+aircrack-ng basic_wep_wep-01.cap
+
+# use the ASCII or the key without ":"
