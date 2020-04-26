@@ -12,3 +12,14 @@ git clone --depth 1 https://github.com/sensepost/mana.git
 mv mana mana-toolkit
 mkdir /etc/mana-toolkit/
 mv mana-toolkit/run-mana/conf/*.conf /etc/mana-toolkit/
+
+# configuration file
+# edit with sudo leafpad
+# /etc/mana-toolkit/hostapd-mana.conf   <== change host mac
+# Scripts location
+# /usr/share/mana-toolkit/run-mana/start-nat-simple.sh   <== change upstream 
+
+# bash /usr/share/mana-toolkit/run-mana/start-nat-simple.sh 
+
+
+
