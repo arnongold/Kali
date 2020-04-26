@@ -8,3 +8,9 @@ service NetworkManager start
 /etc/init.d/bluetooth status
 /etc/init.d/bluetooth start
 
+# sync clock
+sudo ntpdate il.pool.ntp.org
+
+# start local web server
+service apache2 start
+

