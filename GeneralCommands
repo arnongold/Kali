@@ -1,5 +1,9 @@
 # change user
 su - root
+pwd
+id
+uname -a
+
 
 # start a service
 service NetworkManager start
